@@ -1,0 +1,16 @@
+{
+  "Resources": {
+    "Type": "AWS::S3::Bucket",
+    "Properties": {
+       "Tags" : { "Key" : "Ag1", "Value" : "Ag1"},
+       "BucketEncryption": {
+            "ServerSideEncryptionConfiguration": [ {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+       }
+    }
+  }
+}
