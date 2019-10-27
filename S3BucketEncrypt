@@ -3,10 +3,10 @@
         "MyBucket" : {
         "Type": "AWS::S3::Bucket",
         "Properties": {
-            "Tags": {
+            "Tags": [{
                 "Key": Ag1,
                 "Value": Ag1
-            },
+            }],
             "BucketEncryption": {
                 "ServerSideEncryptionConfiguration": [
                     {
