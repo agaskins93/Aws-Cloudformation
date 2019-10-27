@@ -4,8 +4,8 @@
         "Type": "AWS::S3::Bucket",
         "Properties": {
             "Tags": {
-                "Key": "Ag1",
-                "Value": "Ag1"
+                "Key": Ag1,
+                "Value": Ag1
             },
             "BucketEncryption": {
                 "ServerSideEncryptionConfiguration": [
