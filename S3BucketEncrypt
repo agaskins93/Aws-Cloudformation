@@ -1,5 +1,66 @@
 {
-    "Resources": {
+"Parameters":{
+"VPCid" : {
+    "Type" : "String",
+    "Default": "vpc-2f600a55"
+  }
+},
+
+"Resources": {
+  "pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.16.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
+"pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.0.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
+"pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.48.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
+"pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.64.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
+"pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.32.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
+"pubSubnet1" : {
+   "Type" : "AWS::EC2::Subnet",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "CidrBlock" : "172.31.80.0/20",
+      "AvailabilityZone" : "us-east-1a",
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+},
         "MyBucket" : {
         "Type": "AWS::S3::Bucket",
         "Properties": {
@@ -18,4 +79,5 @@
             }
         }
     }
-}}
+  }
+}
