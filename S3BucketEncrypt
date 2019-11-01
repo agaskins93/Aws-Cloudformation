@@ -25,7 +25,7 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
-"pubSubnet1" : {
+"privateSubnet1" : {
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
@@ -34,7 +34,7 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
-"pubSubnet1" : {
+"pubSubnet2" : {
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
@@ -43,7 +43,7 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
-"pubSubnet1" : {
+"privateSubnet2" : {
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
@@ -52,7 +52,7 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
-"pubSubnet1" : {
+"pubSubnet3" : {
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
@@ -61,6 +61,13 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
+"RouteTable" : {
+   "Type" : "AWS::EC2::RouteTable",
+   "Properties" : {
+      "VpcId" : { "Ref" : "VPCid" },
+      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+   }
+}
         "MyBucket" : {
         "Type": "AWS::S3::Bucket",
         "Properties": {
