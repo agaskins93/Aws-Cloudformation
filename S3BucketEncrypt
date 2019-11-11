@@ -20,7 +20,7 @@
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
-      "CidrBlock" : "172.31.0.0/20",
+      "CidrBlock" : "172.31.79.0/20",
       "AvailabilityZone" : "us-east-1a",
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
@@ -38,7 +38,7 @@
    "Type" : "AWS::EC2::Subnet",
    "Properties" : {
       "VpcId" : { "Ref" : "VPCid" },
-      "CidrBlock" : "172.31.64.0/20",
+      "CidrBlock" : "172.31.100.0/20",
       "AvailabilityZone" : "us-east-1a",
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
@@ -68,16 +68,13 @@
       "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
    }
 },
+ "myec2Stack" : {
+      "Type" : "AWS::CloudFormation::Stack",
+      "Properties" : {
+        "TemplateURL" : "https://mytemps.s3.amazonaws.com/scripts/ec2.json",
+      }
+    },
 
-"myEc2" : {
-"Type" : "AWS::EC2::Instance",
-  "Properties" : {
-      "AvailabilityZone" : "us-east-1a",
-      "InstanceType" : "t2-micro",
-      "ImageId" : "i-0e7fc04088315abf7",
-      "Tags" : [ { "Key" : "myec2", "Value" : "ec2" } ]
-    }
-   },
         "MyBucket" : {
         "Type": "AWS::S3::Bucket",
         "Properties": {
@@ -96,5 +93,12 @@
             }
         }
     }
-  }
+  },
+  
+  "Outputs" : {
+  "StackVPC" : {
+    "Description" : "The subnets",
+    "Value" : { "Ref" : "privateSubnet1" },
+        }
+    }
 }
