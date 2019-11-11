@@ -1,0 +1,16 @@
+{
+
+"Resources": {
+"myEc2" : {
+"Type" : "AWS::EC2::Instance",
+  "Properties" : {
+      "AvailabilityZone" : "us-east-1a",
+      "InstanceType" : "t2.micro",
+      "ImageId" : "ami-0ad63552c05e942d7",
+      "SubnetId" : "subnet-01da7174386b1394c",
+      "Tags" : [ { "Key" : "myec2", "Value" : "ec2"  } ]
+         }
+        }
+       }
+
+}
